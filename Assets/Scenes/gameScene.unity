@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -449,7 +449,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: https://r2---sn-oxu8pnpvo-ua8s.googlevideo.com/videoplayback?expire=1585684489&ei=qEuDXrzUO8HRgAeAsJ34Cg&ip=109.186.94.202&id=o-AP6o-4ygbdIFsYYbvOfkk1wR8XYoq_MvNyNp_0Qo1f28&itag=22&source=youtube&requiressl=yes&mh=OR&mm=31%2C29&mn=sn-oxu8pnpvo-ua8s%2Csn-aigzrn7s&ms=au%2Crdu&mv=m&mvi=1&pcm2cms=yes&pl=18&initcwndbps=580000&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.298&lmt=1509737436874181&mt=1585662815&fvip=2&fexp=23882514&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=ADKhkGMwRQIgcWa6mUe0y9yhT-aJy5m4l6V6b_oer8XxPlljSHmXbv0CIQDBlPrmBt23EqkqQ7dHyF4YWN6nLzA4afEgDey91pnohw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=ABSNjpQwRgIhAN_t3pu0Gv8BAx6LCDt6j_SJvmUlwYQ6F9BKpz37GX4gAiEA2DQv6zdsfam6NupDxx6FE2cvAxm-PA-i7CnbgeR7GNg%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -474,7 +474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 141}
+  m_AnchoredPosition: {x: 300, y: 130}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616676251
