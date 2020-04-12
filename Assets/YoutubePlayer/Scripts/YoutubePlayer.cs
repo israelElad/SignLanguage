@@ -22,6 +22,7 @@ namespace YoutubePlayer
         /// </summary>
         public string youtubeUrl;
 
+        public bool urlExist = false;
         /// <summary>
         /// VideoStartingDelegate 
         /// </summary>
@@ -39,14 +40,20 @@ namespace YoutubePlayer
 
         private void Awake()
         {
-            youtubeClient = new YoutubeClient();
-            videoPlayer = GetComponent<VideoPlayer>();
+            
+                youtubeClient = new YoutubeClient();
+                videoPlayer = GetComponent<VideoPlayer>();
+           
+            
         }
+
 
         private async void OnEnable()
         {
-            if (videoPlayer.playOnAwake)
-                await PlayVideoAsync();
+            if (!youtubeUrl.Equals(""))
+                if (videoPlayer.playOnAwake)
+                    await PlayVideoAsync();
+             
         }
 
         /// <summary>
