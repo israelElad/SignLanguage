@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 453504819}
   - component: {fileID: 453504818}
   - component: {fileID: 453504817}
+  - component: {fileID: 453504820}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -371,6 +372,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453504820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453504816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88197d4a3a159048bc8878292a3eb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &616676246
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +462,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: https://r1---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1586785440&ei=QBiUXtHQCMPY1wbVsZSwDQ&ip=2a01%3A6500%3Aa046%3Acad8%3Aa2e7%3A7359%3A9d05%3A1325&id=o-AO5FrbtU00v0YYruZF06vylKvEnZPUL2QZ2v6OAGI3Id&itag=22&source=youtube&requiressl=yes&mh=BS&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7s&ms=au%2Crdu&mv=m&mvi=0&pl=46&initcwndbps=3552500&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.763&lmt=1513069127627568&mt=1586763752&fvip=1&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AJpPlLswRQIgVCBfka_ePvmoCec9dyMyKJo3ANTHLV7YGZ-r9FQ3JnECIQCybuop_lnQJhICrd_YWwxiTPq-31GfMJJPoc3MAlM6nQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALrAebAwRAIge9tAXaOz57cXh5w0FjVRjwP0LuFRSqtSJoIWfS11G5kCICwvc-XIQ5ajmnm4QjUKWDqvlnNIFhoDcncp9pN5yNTZ
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -472,9 +485,9 @@ RectTransform:
   m_Father: {fileID: 1215184412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 350}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150, y: -80}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &616676251
@@ -731,12 +744,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
