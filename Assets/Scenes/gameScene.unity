@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -462,7 +462,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://r1---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1586785440&ei=QBiUXtHQCMPY1wbVsZSwDQ&ip=2a01%3A6500%3Aa046%3Acad8%3Aa2e7%3A7359%3A9d05%3A1325&id=o-AO5FrbtU00v0YYruZF06vylKvEnZPUL2QZ2v6OAGI3Id&itag=22&source=youtube&requiressl=yes&mh=BS&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7s&ms=au%2Crdu&mv=m&mvi=0&pl=46&initcwndbps=3552500&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.763&lmt=1513069127627568&mt=1586763752&fvip=1&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AJpPlLswRQIgVCBfka_ePvmoCec9dyMyKJo3ANTHLV7YGZ-r9FQ3JnECIQCybuop_lnQJhICrd_YWwxiTPq-31GfMJJPoc3MAlM6nQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALrAebAwRAIge9tAXaOz57cXh5w0FjVRjwP0LuFRSqtSJoIWfS11G5kCICwvc-XIQ5ajmnm4QjUKWDqvlnNIFhoDcncp9pN5yNTZ
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
