@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class wordDisplay : MonoBehaviour
 
     public static string Reverse(string s)
     {
+        s= new String(s.Select(x => x == '(' ? ')' : (x == ')' ? '(' : x)).ToArray());
         char[] charArray = s.ToCharArray();
         Array.Reverse(charArray);
         return new string(charArray);
