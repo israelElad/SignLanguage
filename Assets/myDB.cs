@@ -55,12 +55,12 @@ namespace YoutubePlayer
         //exemple need delet 
         void Update()
         {
-            if (i%1000 == 0)
-            {
-                WordLottery();
-                i = i % 1000;
-            }
-            i++;
+            //if (i%1000 == 0)
+            //{
+            //    WordLottery();
+            //    i = i % 1000;
+            //}
+            //i++;
         }
     }
 }
