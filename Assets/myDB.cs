@@ -46,13 +46,12 @@ namespace YoutubePlayer
                 break;
             }
             rdr.Close();
- 
+
             GameObject.Find("Video Player").GetComponent<YoutubePlayer>().PlayVideoAsync(wordUrl);
             return wordlist;
         }
 
         // Update is called once per frame
-        //exemple need delet 
         void Update()
         {
             //if (i%1000 == 0)
