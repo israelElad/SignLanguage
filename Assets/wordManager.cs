@@ -6,7 +6,7 @@ using YoutubePlayer;
 
 public class wordManager : MonoBehaviour
 {
-
+    [SerializeField]
     List<string> wordslist;
     public wordSpawner spawner;
     int curWordIndex=0;
@@ -34,5 +34,16 @@ public class wordManager : MonoBehaviour
         Debug.Log(word);
         display.SetWord(word);
     }
+
+    public string getCorrectWord()
+    {
+        return wordslist[0];
+    }
+
+    //todo: implement for levels where there is more than 1 correct word! 
+    //List<string> getCurrectWords()
+    //{
+
+    //}
 
 }

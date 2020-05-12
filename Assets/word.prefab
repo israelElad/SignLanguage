@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 941687431651492311}
   - component: {fileID: 5266135924218172728}
   - component: {fileID: 114161147079285946}
+  - component: {fileID: 114924145818384904}
+  - component: {fileID: 65350796563208408}
   m_Layer: 5
   m_Name: word
   m_TagString: Untagged
@@ -92,3 +94,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 5266135924218172728}
   fallSpeed: 1
+--- !u!114 &114924145818384904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425642357800369044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472ee17065304d64595fbe108a33d573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+--- !u!65 &65350796563208408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425642357800369044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 160, y: 30, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
