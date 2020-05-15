@@ -13,7 +13,10 @@ public class wordDisplay : MonoBehaviour
 
     public void SetWord(string word)
     {
-        text.text = Reverse(word);
+        word = String.Join(" ", word.Split(' ').Reverse());
+        word = Reverse(word);
+        word = SplitToLines(word);
+        text.text = word;
     }
 
     public static string Reverse(string s)
@@ -23,6 +26,13 @@ public class wordDisplay : MonoBehaviour
         Array.Reverse(charArray);
         return new string(charArray);
     }
+
+    private string SplitToLines(string word)
+    {
+        word= word.Replace(" / ", "/");
+        return word.Replace(' ', '\n');
+    }
+
 
     public void removeWord()
     {

@@ -526,6 +526,134 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &924295484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924295486}
+  - component: {fileID: 924295485}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &924295485
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924295484}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 07c33c1a3dc807d4ba5cfa5375b2a9aa,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 70dbacc7fc0cf74449aca779f86eb36d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &924295486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924295484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -32.75808, y: 72.337234, z: 13.130482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924676835
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1042071771}
-  wordDelay: 1.5
+  wordDelay: 2.5
 --- !u!1 &1612920758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1141,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://r1---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1588701262&ei=7lOxXrb-FdT-xwLi75jYAg&ip=2a01%3A6500%3Aa051%3Acad8%3Ad21c%3Aa748%3A4ac5%3A6b34&id=o-AAtixqwX5auR3yuXfM7ekN-qNjpNFh_VDbUHxknop5yz&itag=22&source=youtube&requiressl=yes&mh=zr&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7d&ms=au%2Crdu&mv=m&mvi=0&pl=46&initcwndbps=2706250&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.391&lmt=1511864042968874&mt=1588679616&fvip=1&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AJpPlLswRAIgMTZyS5sGNBwQVNh7znNlokX5WI9YuWMGuEnYNNEv-B0CIGTS2WbeqPnlyCb3Zgrccchkd1xQRuFcjQ0NLdjbpsvZ&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALrAebAwRQIhAKdoSt3ZlIHpHkK-W7-aoSMuRzrDoxAa1mH_01XpKYFeAiAkhwNpPQO19btkAVtWWOdqVuF5xZ2zOyYLGv2nOeVw8g%3D%3D
+  m_Url: https://r4---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1589572610&ei=op--XtyYLq3bmwfZiqrQDQ&ip=2a01%3A6500%3Aa042%3Acad8%3A32e9%3A7359%3A9de7%3Ab734&id=o-ADFeaNSGC6W95LjJXp4T1CPLbOC6TbXoFUoVzezaFpcr&itag=22&source=youtube&requiressl=yes&mh=yK&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7d&ms=au%2Crdu&mv=m&mvi=3&pl=46&initcwndbps=3090000&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=3.622&lmt=1515403951452733&mt=1589550935&fvip=4&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgIueBa_h9EEj1ghU-K1CXy31gq2DmytYicheGlpGhLn4CIGmSCCfz8hHjL-XY46917yezaE07PS27tZS86vj6KALU&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAL0vMSc63OkaGn39QYk5_IvnMqEJdV9e2o8-oD4DTDcDAiEAvA8BAH2-0yXQ4ExXqYgIXoTRHKl5Xd6YvYfiarDpVLQ%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

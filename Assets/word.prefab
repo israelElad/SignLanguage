@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 5266135924218172728}
-  fallSpeed: 1
+  fallSpeed: 2
 --- !u!114 &114924145818384904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472ee17065304d64595fbe108a33d573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
 --- !u!65 &65350796563208408
 BoxCollider:
   m_ObjectHideFlags: 0
