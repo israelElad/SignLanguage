@@ -6,8 +6,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using MySql.Data;
  using MySql.Data.MySqlClient;
-
-
+using System.Linq;
 
 namespace YoutubePlayer
 {
@@ -31,6 +30,8 @@ namespace YoutubePlayer
 
             MySqlDataReader rdr = cmd.ExecuteReader();
 
+
+
             while (rdr.Read())
             {
                 wordlist.Add(rdr.GetString(0));
@@ -47,8 +48,30 @@ namespace YoutubePlayer
             }
             rdr.Close();
 
+            //reformat text to rtl
+            for(var i=0; i< wordlist.Count; i++)
+            {
+                wordlist[i] = String.Join(" ", wordlist[i].Split(' ').Reverse());
+                wordlist[i] = Reverse(wordlist[i]);
+                wordlist[i] = SplitToLines(wordlist[i]);
+            }
+
             GameObject.Find("Video Player").GetComponent<YoutubePlayer>().PlayVideoAsync(wordUrl);
             return wordlist;
+        }
+
+        public static string Reverse(string s)
+        {
+            s = new String(s.Select(x => x == '(' ? ')' : (x == ')' ? '(' : x)).ToArray());
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
+        private string SplitToLines(string word)
+        {
+            word = word.Replace(" / ", "/");
+            return word.Replace(' ', '\n');
         }
 
     }

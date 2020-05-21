@@ -142,7 +142,7 @@ MeshCollider:
   m_GameObject: {fileID: 155424165}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -215,7 +215,7 @@ BoxCollider:
   m_GameObject: {fileID: 155424165}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.000003, y: 0.00000070773626, z: 10.000001}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1232,7 +1232,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: https://r3---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1590110973&ei=nNbGXp7JPLuzxN8P1POQmA4&ip=213.151.60.180&id=o-AKEVFbdxqvPSiIOf7p_eOSOvfBmLGzf66H_238eX41i4&itag=22&source=youtube&requiressl=yes&mh=Af&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrner&ms=au%2Crdu&mv=m&mvi=2&pl=22&initcwndbps=2193750&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=3.506&lmt=1514883334682199&mt=1590089324&fvip=3&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgKFMhZfqoefR7JkY7GQXpP2VM9BXRMvIg02bkpssnFs4CIQDmnX10eYN3BysQCfxlZSp9rnN8F2Oo-HpDnfWyfsr9Ig%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAIeXrFoc3EAaa-3guj0DYFlcgiNTxtiUer_Zpjjw679oAiArqaebgfoVba-o6FB0F8h9xFTeTc6LFFAYm2h9KsSaIg%3D%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1271,7 +1271,7 @@ MeshCollider:
   m_GameObject: {fileID: 1663572914}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -1344,7 +1344,7 @@ BoxCollider:
   m_GameObject: {fileID: 1663572914}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10.000003, y: 0.000000409713, z: 10.000002}
   m_Center: {x: 0, y: 0, z: 0}

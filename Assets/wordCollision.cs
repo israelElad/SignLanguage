@@ -18,7 +18,6 @@ public class wordCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision with" + other);
         if (other.gameObject.tag == "Cup")
         {
             Text textInCup = gameObject.GetComponent<Text>();
@@ -35,7 +34,12 @@ public class wordCollision : MonoBehaviour
                 Debug.Log("incorrect word!");
                 scoreClass.incorrectWordScoreUpdate();
             }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (other.gameObject.tag == "Floor")
+        {
+            Destroy(gameObject);
+        }
+            
     }
 }

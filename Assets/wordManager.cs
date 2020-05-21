@@ -10,15 +10,31 @@ public class wordManager : MonoBehaviour
     List<string> wordslist;
     public wordSpawner spawner;
     int curWordIndex=0;
+    string correctWord;
     // Start is called before the first frame update
     void Start()
     {
         myDB db=GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
+        correctWord = wordslist[0];
+        shuffleList(wordslist);
+    }
+
+    private void shuffleList(List<string> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            string temp = list[i];
+            int randomIndex = UnityEngine.Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
     }
 
     public bool addNextWordFromList()
     {
+        Debug.Log("3: " + wordslist[0]);
+
         if (curWordIndex >= wordslist.Count)
         {
             return false;
@@ -37,7 +53,7 @@ public class wordManager : MonoBehaviour
 
     public string getCorrectWord()
     {
-        return wordslist[0];
+        return correctWord;
     }
 
     //todo: implement for levels where there is more than 1 correct word! 
