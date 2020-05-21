@@ -51,15 +51,5 @@ namespace YoutubePlayer
             return wordlist;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            //if (i%1000 == 0)
-            //{
-            //    WordLottery();
-            //    i = i % 1000;
-            //}
-            //i++;
-        }
     }
 }
