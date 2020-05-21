@@ -11,4 +11,9 @@ public class settingsMenu : MonoBehaviour
         audioMixer.SetFloat("mixerVolume", volume);
         Debug.Log(volume);
     }
+
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }
