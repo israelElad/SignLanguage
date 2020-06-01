@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using YoutubePlayer;
 
@@ -33,6 +34,11 @@ public class wordManager : MonoBehaviour
 
     public bool addNextWordFromList()
     {
+        if (!wordslist.Any())
+        {
+            Debug.Log("3: wordsList is empty");
+            return false;
+        }
         Debug.Log("3: " + wordslist[0]);
 
         if (curWordIndex >= wordslist.Count)
