@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-m_EditorVersion: 2019.2.11f1
-m_EditorVersionWithRevision: 2019.2.11f1 (5f859a4cfee5)
-=======
-m_EditorVersion: 2019.2.8f1
-m_EditorVersionWithRevision: 2019.2.8f1 (ff5b465c8d13)
->>>>>>> parent of 857a2c7... update unity version
