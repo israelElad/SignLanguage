@@ -18,6 +18,7 @@ public class wordManager : MonoBehaviour
         myDB db=GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
         correctWord = wordslist[0];
+        Debug.Log("correctWord is: " + correctWord);
         shuffleList(wordslist);
     }
 
@@ -36,10 +37,9 @@ public class wordManager : MonoBehaviour
     {
         if (!wordslist.Any())
         {
-            Debug.Log("3: wordsList is empty");
+            Debug.Log("wordsList is empty");
             return false;
         }
-        Debug.Log("3: " + wordslist[0]);
 
         if (curWordIndex >= wordslist.Count)
         {
