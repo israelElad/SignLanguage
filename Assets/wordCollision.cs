@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ public class wordCollision : MonoBehaviour
 {
     private wordManager manager;
     public score scoreClass;
+    private bool hasCollide = false;
+
 
     public void Start()
     {
@@ -18,28 +21,51 @@ public class wordCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if(hasCollide == true){
+            return;
+        }
+        hasCollide=true;
         if (other.gameObject.tag == "Cup")
         {
             Text textInCup = gameObject.GetComponent<Text>();
-            
+
             Debug.Log("current word: " + textInCup.text + " correct word is:" + manager.getCorrectWord());
 
             if (textInCup.text == manager.getCorrectWord())
             {
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
+                GameManager.nextLevel();
             }
             else
             {
                 Debug.Log("incorrect word!");
                 scoreClass.incorrectWordScoreUpdate();
+                if (manager.TextObjInGame == 0)
+                {
+                    Debug.Log("No more words to catch- next level");
+                    GameManager.nextLevel();
+                }
             }
+
             Destroy(gameObject);
+            manager.TextObjInGame--;
+            Debug.Log(manager.TextObjInGame);
         }
         else if (other.gameObject.tag == "Floor")
         {
             Destroy(gameObject);
+            manager.TextObjInGame--;
+            Debug.Log("floor!");
+            Debug.Log(manager.TextObjInGame);
+            if (manager.TextObjInGame == 0)
+            {
+                Debug.Log("No more words to catch- next level");
+                GameManager.nextLevel();
+            }
         }
+
+        
             
     }
 }

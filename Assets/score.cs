@@ -6,21 +6,25 @@ using UnityEngine.UI;
 public class score : MonoBehaviour
 {
     public Text scoreText;
+    public static int scoreVal=0;
     private const int incorrectWordScore = -10;
     private const int correctWordScore = 100;
 
     private void Start()
     {
-        scoreText.text = "0";
+        scoreText.text = scoreVal.ToString();
     }
 
     public void correctWordScoreUpdate()
     {
-        scoreText.text = (int.Parse(scoreText.text) + correctWordScore).ToString();
+
+        scoreVal += correctWordScore;
+        scoreText.text = scoreVal.ToString();
     }
     public void incorrectWordScoreUpdate()
     {
-        scoreText.text = (int.Parse(scoreText.text) + incorrectWordScore).ToString();
+        scoreVal += incorrectWordScore;
+        scoreText.text = scoreVal.ToString();
     }
 
 

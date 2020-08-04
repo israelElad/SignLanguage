@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using YoutubePlayer;
 
 public class wordManager : MonoBehaviour
@@ -12,15 +13,27 @@ public class wordManager : MonoBehaviour
     public wordSpawner spawner;
     int curWordIndex=0;
     string correctWord;
+    public int TextObjInGame;
     // Start is called before the first frame update
     void Start()
     {
         myDB db=GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
+        //loadingScreen();
         correctWord = wordslist[0];
         Debug.Log("correctWord is: " + correctWord);
         shuffleList(wordslist);
+        TextObjInGame = wordslist.Count;
     }
+
+    public GameObject loadingWordPrefab;
+
+    //private void loadingScreen() 
+    //{
+    //    GameObject go = (GameObject)Instantiate(loadingWordPrefab);
+
+        
+    //}
 
     private void shuffleList(List<string> list)
     {
@@ -35,12 +48,14 @@ public class wordManager : MonoBehaviour
 
     public bool addNextWordFromList()
     {
+        //shouldn't happen
         if (!wordslist.Any())
         {
             Debug.Log("wordsList is empty");
             return false;
         }
 
+        //no more words
         if (curWordIndex >= wordslist.Count)
         {
             return false;
@@ -62,10 +77,8 @@ public class wordManager : MonoBehaviour
         return correctWord;
     }
 
-    //todo: implement for levels where there is more than 1 correct word! 
-    //List<string> getCurrectWords()
-    //{
-
-    //}
+    public List<string> getWordslist()   {
+        return wordslist;
+    }
 
 }

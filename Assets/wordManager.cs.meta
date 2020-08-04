@@ -3,7 +3,10 @@ guid: d6c6f9f9c70f3de4fb3e36135a91b62b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spawner: {instanceID: 0}
+  - loadingWordPrefab: {fileID: 3324977910954977469, guid: 024e67f927c1204408c457c076cbbe2f,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
