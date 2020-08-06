@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class controllable : MonoBehaviour
 {
-    private const float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +13,6 @@ public class controllable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, 0f);
+        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * GameManager.CupSpeed, 0f, 0f);
     }
 }

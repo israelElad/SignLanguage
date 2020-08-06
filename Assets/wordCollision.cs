@@ -9,6 +9,7 @@ public class wordCollision : MonoBehaviour
 {
     private wordManager manager;
     public score scoreClass;
+    private heartsSystem hs;
     private bool hasCollide = false;
 
 
@@ -18,6 +19,8 @@ public class wordCollision : MonoBehaviour
         manager = scriptObj.GetComponent("wordManager") as wordManager;
         GameObject scoreObj = GameObject.Find("Score");
         scoreClass = scoreObj.GetComponent("score") as score;
+        GameObject heartsObj = GameObject.Find("Hearts");
+        hs = heartsObj.GetComponent("heartsSystem") as heartsSystem;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -35,12 +38,14 @@ public class wordCollision : MonoBehaviour
             {
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
+                hs.addHeart();
                 GameManager.nextLevel();
             }
             else
             {
                 Debug.Log("incorrect word!");
                 scoreClass.incorrectWordScoreUpdate();
+                hs.removeHeart();
                 if (manager.TextObjInGame == 0)
                 {
                     Debug.Log("No more words to catch- next level");

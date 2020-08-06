@@ -357,6 +357,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!1 &275824655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275824656}
+  - component: {fileID: 275824657}
+  m_Layer: 5
+  m_Name: Hearts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &275824656
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275824655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1928716610}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -247}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &275824657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275824655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053f3f97241b93446a6c7eb1f51b7278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartSprite: {fileID: 21300000, guid: 7bb2cba4f5a7fa441904683ef954b52e, type: 3}
 --- !u!1 &437297241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f7c53043101ee0547b15cd15396e7150,
@@ -1005,7 +1054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1042071771}
-  wordDelay: 2.5
 --- !u!1 &1330332967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1324,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://redirector.googlevideo.com/videoplayback?expire=1596581117&ei=nZApX6TdGo-20wWfpqjgBQ&ip=2a01%3A6500%3Aa046%3Acad8%3Af2c5%3A0%3A401e%3A7c8f&id=ce748ef68bf28013&itag=22&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=3.227&lmt=1516693302912211&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAOa9hD7ia3aEi0jpSPi-wYp94UvYHvESPbtrwS3PwxG0AiEAskn-drDI1MViOXz9uFfGvawGShdawnpVFTBj9aJgBoA%3D
+  m_Url: https://r3---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1596775380&ei=dIcsX_emLIzKWcj-sfAI&ip=2a01%3A6500%3Aa047%3Acad8%3Ae2d2%3A0%3A2d%3Abe8b&id=o-AJRaSjan49OoS-JF5MUHxpvfUoW4s0YILYlgqtkCYL8G&itag=22&source=youtube&requiressl=yes&mh=CA&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7z&ms=au%2Crdu&mv=m&mvi=3&pl=46&initcwndbps=2713750&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.832&lmt=1510395256072532&mt=1596753640&fvip=3&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAK-PgnKb-sR5jADt-iw018xv77T8mmTDAVPHi1YTR7hhAiBcAJIPKtIu73xvaPXIt4ayalXdsPJ5L4Uvl4orRAknyg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAOijoBeooxMJzDTniWNx95NKlM_JYv_i5MkQpN4QQY2KAiEAgAC6l7DS8jvNC96mJcU7UqVfaDsXyfxOmn-XOCc412c%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1704,6 +1752,7 @@ RectTransform:
   m_Children:
   - {fileID: 1330332968}
   - {fileID: 221428068}
+  - {fileID: 275824656}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

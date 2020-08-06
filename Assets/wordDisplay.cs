@@ -9,7 +9,6 @@ public class wordDisplay : MonoBehaviour
 {
     
     public Text text;
-    public float fallSpeed=1f;
 
     public void SetWord(string word)
     {
@@ -23,6 +22,6 @@ public class wordDisplay : MonoBehaviour
 
     public void Update()
     {
-        transform.Translate(0f, -fallSpeed * Time.deltaTime, 0f);
+        transform.Translate(0f, -GameManager.FallSpeed * Time.deltaTime, 0f);
     }
 }

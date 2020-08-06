@@ -5,7 +5,6 @@ using UnityEngine;
 public class wordTimer : MonoBehaviour
 {
     public wordManager manager;
-    public float wordDelay = 1.5f;
     private float nextWordTime = 0;
 
     public void Update()
@@ -18,8 +17,8 @@ public class wordTimer : MonoBehaviour
             {
                 Debug.Log("no more words to display!");
             }
-            nextWordTime = Time.time + wordDelay;
-            wordDelay *= 0.99f;
+            nextWordTime = Time.time + GameManager.WordDelay;
+            GameManager.WordDelay *= 0.99f;
         }
     }
 
