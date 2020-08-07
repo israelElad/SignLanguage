@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- using System;
- using System.Data;
-using System.Collections.Generic;
+using System;
+using System.Data;
 using MySql.Data;
- using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System.Linq;
 
 namespace YoutubePlayer
@@ -13,14 +12,13 @@ namespace YoutubePlayer
     public class myDB : MonoBehaviour
     {
         private MySqlConnection con;
-        private int i = 0;
         // Start is called before the first frame update
         void Start()
         {
 
             string cs = "Database = SignLanguageDB; Server = 127.0.0.1; Uid = root; Password = vered1234; pooling = false; CharSet = utf8; port = 3306";
             con = new MySqlConnection(cs);
-            con.Open();   
+            con.Open();
         }
         public List<string> WordLottery()
         {
@@ -47,16 +45,16 @@ namespace YoutubePlayer
                 break;
             }
             rdr.Close();
+            GameObject.Find("Video Player").GetComponent<YoutubePlayer>().PlayVideoAsync(wordUrl);
 
             //reformat text to rtl
-            for(var i=0; i< wordlist.Count; i++)
+            for (var i = 0; i < wordlist.Count; i++)
             {
                 wordlist[i] = String.Join(" ", wordlist[i].Split(' ').Reverse());
                 wordlist[i] = Reverse(wordlist[i]);
                 wordlist[i] = SplitToLines(wordlist[i]);
             }
 
-            GameObject.Find("Video Player").GetComponent<YoutubePlayer>().PlayVideoAsync(wordUrl);
             return wordlist;
         }
 
