@@ -16,8 +16,7 @@ public class heartsSystem : MonoBehaviour
         heartsNextPos = new Vector2(-611, 263);
         for (int i = 0; i < GameManager.HeartAmount; i++)
         {
-            CreateHeartImage(heartsNextPos);
-            heartsNextPos += new Vector2(30, 0);
+            addHeart();
         }
         
     }
@@ -32,15 +31,13 @@ public class heartsSystem : MonoBehaviour
 
         //Locate and Size heart
         heartGameObj.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
-        heartGameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(10, 10);
+        heartGameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
 
         //set heart sprite
         Image heartImage = heartGameObj.GetComponent<Image>();
         heartImage.sprite = heartSprite;
 
         heartsList.Add(heartImage);
-
-        //return heartImage;
     }
 
     List<Image> getHeartsList()
@@ -53,7 +50,7 @@ public class heartsSystem : MonoBehaviour
         if (heartsList.Count <= 0)
         {
             Debug.Log("Dead!");
-            //dead
+            //dead - TODO!
         }
         else
         {
