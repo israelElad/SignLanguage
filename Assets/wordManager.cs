@@ -11,29 +11,28 @@ public class wordManager : MonoBehaviour
     [SerializeField]
     List<string> wordslist;
     public wordSpawner spawner;
-    int curWordIndex=0;
+    int curWordIndex = 0;
     string correctWord;
+    public LoadingIndicator isLoading;
     public int TextObjInGame;
     // Start is called before the first frame update
     void Start()
     {
-        myDB db=GameObject.Find("Scripts").GetComponent<myDB>();
+        var loading = GameObject.Find("Loading");
+        isLoading = loading.GetComponent("LoadingIndicator") as LoadingIndicator;
+        GameObject.Find("Video Player").GetComponent<YoutubePlayer.YoutubePlayer>().YoutubeVideoStarting += Loaded;
+        myDB db = GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
-        //loadingScreen();
         correctWord = wordslist[0];
         Debug.Log("correctWord is: " + correctWord);
         shuffleList(wordslist);
         TextObjInGame = wordslist.Count;
     }
 
-    public GameObject loadingWordPrefab;
-
-    //private void loadingScreen() 
-    //{
-    //    GameObject go = (GameObject)Instantiate(loadingWordPrefab);
-
-        
-    //}
+    private void Loaded(string url)
+    {
+        isLoading.Loaded();
+    }
 
     private void shuffleList(List<string> list)
     {
@@ -77,7 +76,8 @@ public class wordManager : MonoBehaviour
         return correctWord;
     }
 
-    public List<string> getWordslist()   {
+    public List<string> getWordslist()
+    {
         return wordslist;
     }
 
