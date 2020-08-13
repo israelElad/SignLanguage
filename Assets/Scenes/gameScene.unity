@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -865,6 +865,98 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &970254916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970254917}
+  - component: {fileID: 970254920}
+  - component: {fileID: 970254919}
+  - component: {fileID: 970254918}
+  m_Layer: 5
+  m_Name: Loading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &970254917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970254916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1928716610}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -200}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &970254918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970254916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f31e647ec96ac4da7f5b2348c8170b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLoading: {fileID: 970254919}
+--- !u!114 &970254919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970254916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: f53120adf92a25948839a05648fe01e5, type: 3}
+    m_FontSize: 250
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Loading...
+--- !u!222 &970254920
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970254916}
+  m_CullTransparentMesh: 0
 --- !u!1 &1041796048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordslist: []
   spawner: {fileID: 1042071772}
+  isLoading: {fileID: 0}
   TextObjInGame: 0
   loadingWordPrefab: {fileID: 3324977910954977469, guid: 024e67f927c1204408c457c076cbbe2f,
     type: 3}
@@ -1324,7 +1417,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://r3---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1596775380&ei=dIcsX_emLIzKWcj-sfAI&ip=2a01%3A6500%3Aa047%3Acad8%3Ae2d2%3A0%3A2d%3Abe8b&id=o-AJRaSjan49OoS-JF5MUHxpvfUoW4s0YILYlgqtkCYL8G&itag=22&source=youtube&requiressl=yes&mh=CA&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7z&ms=au%2Crdu&mv=m&mvi=3&pl=46&initcwndbps=2713750&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.832&lmt=1510395256072532&mt=1596753640&fvip=3&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAK-PgnKb-sR5jADt-iw018xv77T8mmTDAVPHi1YTR7hhAiBcAJIPKtIu73xvaPXIt4ayalXdsPJ5L4Uvl4orRAknyg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAOijoBeooxMJzDTniWNx95NKlM_JYv_i5MkQpN4QQY2KAiEAgAC6l7DS8jvNC96mJcU7UqVfaDsXyfxOmn-XOCc412c%3D
+  m_Url: https://r1---sn-nhpax-ua8r.googlevideo.com/videoplayback?expire=1597360375&ei=l3Q1X5jbHIeT8gOi6bWABw&ip=176.230.34.227&id=o-AHxYWDcLvCkjph85Z9lq_ywPvoUl2W-GUewir3zOkC7w&itag=22&source=youtube&requiressl=yes&mh=zg&mm=31%2C29&mn=sn-nhpax-ua8r%2Csn-4g5ednsl&ms=au%2Crdu&mv=m&mvi=1&pl=23&initcwndbps=390000&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.972&lmt=1514189739050300&mt=1597338629&fvip=5&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhANhcfbUaoMFnA4Q2vNEBwlxlXEyZ5rTIlr9Ip9_6loW1AiAUsAb5olJ7DpgrtUIhtwkhTEpgf1TCURVuuh9qMbwGmw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgWxt7_e29jcEVgdqAqMhDYe_AiQ03Nyw-cFgfCGYoz4cCIQDt4kx6eYictip-cwpaRLKtiW1FAN1Bsyjwbm9-IRDaMA%3D%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1753,6 +1846,7 @@ RectTransform:
   - {fileID: 1330332968}
   - {fileID: 221428068}
   - {fileID: 275824656}
+  - {fileID: 970254917}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
