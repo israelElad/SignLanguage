@@ -10,7 +10,7 @@ public class wordTimer : MonoBehaviour
     public void Update()
     {
         // next word should appear now
-        if (Time.time >= nextWordTime)
+        if (Time.time >= nextWordTime && manager.doneLoading)
         {
             //add next word
             if (manager.addNextWordFromList() ==false)
