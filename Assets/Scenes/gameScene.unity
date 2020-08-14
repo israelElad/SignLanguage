@@ -1323,7 +1323,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://r5---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1597375253&ei=ta41X9aIHuHUxN8PyN2H8Aw&ip=2a01%3A6500%3Aa043%3Acad8%3A22b0%3A0%3A30f4%3A5f7b&id=o-ABRCqfbrJ83ygPof7j2q--bJ2_hWLeUtTVVJs6imQ_qV&itag=22&source=youtube&requiressl=yes&mh=7D&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7e&ms=au%2Crdu&mv=m&mvi=5&pl=47&initcwndbps=1948750&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=3.065&lmt=1514705630077438&mt=1597353527&fvip=5&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhANq3qEw14HbO3EGgkfxwr4c3-Q7Ls63CQk_VyZVIQZGmAiB8NHW8c0A24v7un9oKUgij85rhD0KQ2dI1aN3Pncg78A%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAIYXXG6CgBffiOVpFjhlo04iuqLkElyl07l7hhgc7uCeAiEA-1sVjRFtyVHo8y1WQusrxgZJrOeRvsMJdQ8icCZyUic%3D
+  m_Url: https://r3---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1597376179&ei=U7I1X_fhB-2lxN8PgIqAsAI&ip=2a01%3A6500%3Aa043%3Acad8%3A22b0%3A0%3A40f4%3A5f7b&id=o-AIKqLtXHcXYgNrvUInlpKkr_N_9J2mLS3SxppNViUZwW&itag=22&source=youtube&requiressl=yes&mh=8U&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigl6nek&ms=au%2Crdu&mv=m&mvi=3&pl=47&initcwndbps=2116250&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=3.157&lmt=1514884073080258&mt=1597354482&fvip=3&fexp=23883098&beids=9466588&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgKugej3OYuTcmVKQ9xa2SlR60URiyhgBodIpmJNA1PH0CIQDiiKp_p1WFPssSbpZTiJ-slZe5YclPQdFoUkNfojUQPA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAL-Fci2KfmugDjNTouHGbpirqyp9DZ_GF5SPhIz5Wtr5AiAaWfvLtb2zfI7MMP_D69DEC506Ds4gvHLAjPpOdpFdMg%3D%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1731,16 +1731,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &1843936639
