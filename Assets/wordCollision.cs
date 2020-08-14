@@ -46,6 +46,7 @@ public class wordCollision : MonoBehaviour
                 Debug.Log("incorrect word!");
                 scoreClass.incorrectWordScoreUpdate();
                 hs.removeHeart();
+                GameManager.HeartAmount -= 1;
                 if (manager.TextObjInGame == 0)
                 {
                     Debug.Log("No more words to catch- next level");
