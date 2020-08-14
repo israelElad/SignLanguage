@@ -38,15 +38,15 @@ public class wordCollision : MonoBehaviour
             {
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
-                hs.addHeart();
+                GameManager.HeartAmount += 1;
                 GameManager.nextLevel();
             }
             else
             {
                 Debug.Log("incorrect word!");
                 scoreClass.incorrectWordScoreUpdate();
-                hs.removeHeart();
                 GameManager.HeartAmount -= 1;
+                hs.removeHeart();
                 if (manager.TextObjInGame == 0)
                 {
                     Debug.Log("No more words to catch- next level");
