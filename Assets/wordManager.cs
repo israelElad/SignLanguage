@@ -14,10 +14,12 @@ public class wordManager : MonoBehaviour
     int curWordIndex = 0;
     string correctWord;
     public LoadingIndicator isLoading;
+    public bool doneLoading = false;
     public int TextObjInGame;
     // Start is called before the first frame update
     void Start()
     {
+        doneLoading = false;
         var loading = GameObject.Find("Loading");
         isLoading = loading.GetComponent("LoadingIndicator") as LoadingIndicator;
         GameObject.Find("Video Player").GetComponent<YoutubePlayer.YoutubePlayer>().YoutubeVideoStarting += Loaded;
@@ -32,6 +34,7 @@ public class wordManager : MonoBehaviour
     private void Loaded(string url)
     {
         isLoading.Loaded();
+        doneLoading = true;
     }
 
     private void shuffleList(List<string> list)
