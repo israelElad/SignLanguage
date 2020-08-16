@@ -27,6 +27,7 @@ public class wordManager : MonoBehaviour
         wordslist = db.WordLottery();
         correctWord = wordslist[0];
         Debug.Log("correctWord is: " + correctWord);
+        wordslist.AddRange(wordslist.Take(6)); //add correct word again for better chance at winning, and also 5 wrong duplicates to prevent cheesing
         shuffleList(wordslist);
         TextObjInGame = wordslist.Count;
     }
