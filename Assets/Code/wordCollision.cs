@@ -50,6 +50,10 @@ public class wordCollision : MonoBehaviour
                 scoreClass.incorrectWordScoreUpdate();
                 GameManager.HeartAmount -= 1;
                 hs.removeHeart();
+
+                AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
+                audioData.PlayOneShot(audioData.clip);
+
                 if (manager.TextObjInGame == 0)
                 {
                     Debug.Log("No more words to catch- next level");
