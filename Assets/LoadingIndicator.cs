@@ -9,7 +9,7 @@ public class LoadingIndicator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isLoading.text = "Loading...";
+        isLoading.text = "...ןעוט";
     }
 
     public void Loaded()
