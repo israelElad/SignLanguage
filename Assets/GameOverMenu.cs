@@ -13,7 +13,7 @@ public class GameOverMenu : MonoBehaviour
     void Start()
     {
         scoreText.text = score.scoreVal.ToString();
-        highscoreText.text= PlayerPrefs.GetInt("HighScore", -1).ToString(); //todo: change to 0
+        highscoreText.text= PlayerPrefs.GetInt("HighScore", 0).ToString();
         Invoke("loadMenuScene", 5f);
     }
 

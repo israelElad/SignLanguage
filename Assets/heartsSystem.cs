@@ -26,7 +26,7 @@ public class heartsSystem : MonoBehaviour
     {
         GameObject heartGameObj = new GameObject("Heart", typeof(Image));
         //set the heart game object to be a child of this transform
-        heartGameObj.transform.parent = transform;
+        heartGameObj.transform.SetParent(transform);
         heartGameObj.transform.localPosition = Vector3.zero;
 
         //Locate and Size heart
@@ -47,12 +47,8 @@ public class heartsSystem : MonoBehaviour
 
     public void removeHeart()
     {
-        if (heartsList.Count <= 0)
-        {
-            Debug.Log("Dead!");
-            //dead - TODO!
-        }
-        else
+        //if heartsList.Count==0 GameManager will call gameOver function 
+        if (heartsList.Count > 0)
         {
             Debug.Log("Removed heart!");
             Destroy(heartsList[heartsList.Count - 1]);
