@@ -39,7 +39,10 @@ public class wordCollision : MonoBehaviour
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
                 GameManager.HeartAmount += 1;
+                DontDestroyOnLoad(GameObject.Find("success sound"));
                 GameManager.nextLevel();
+                AudioSource audioData = GameObject.Find("success sound").GetComponent<AudioSource>();
+                audioData.PlayOneShot(audioData.clip);
             }
             else
             {
