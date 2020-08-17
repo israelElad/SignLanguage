@@ -40,9 +40,13 @@ public class wordCollision : MonoBehaviour
                 scoreClass.correctWordScoreUpdate();
                 GameManager.HeartAmount += 1;
                 DontDestroyOnLoad(GameObject.Find("success sound"));
+                DontDestroyOnLoad(GameObject.Find("Particle System"));
+                DontDestroyOnLoad(GameObject.Find("Particle System (1)"));
                 GameManager.nextLevel();
                 AudioSource audioData = GameObject.Find("success sound").GetComponent<AudioSource>();
                 audioData.PlayOneShot(audioData.clip);
+                GameObject.Find("Particle System").GetComponent<ParticleSystem>().Play();
+                GameObject.Find("Particle System (1)").GetComponent<ParticleSystem>().Play();
             }
             else
             {
