@@ -14,8 +14,7 @@ namespace YoutubePlayer
         // Start is called before the first frame update
         void Start()
         {
-            String db_path = "";
-            db_path = "C:/SignLanguage/DB.db";
+            String db_path = "C:/SignLanguage/DB.db";
             connection = "URI=file:" + db_path;
         }
         public List<string> WordLottery()
