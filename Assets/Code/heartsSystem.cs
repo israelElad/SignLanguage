@@ -31,7 +31,7 @@ public class heartsSystem : MonoBehaviour
 
         //Locate and Size heart
         heartGameObj.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
-        heartGameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
+        heartGameObj.GetComponent<RectTransform>().sizeDelta = new Vector2(30, 30);
 
         //set heart sprite
         Image heartImage = heartGameObj.GetComponent<Image>();
