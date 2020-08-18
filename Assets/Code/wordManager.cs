@@ -26,6 +26,8 @@ public class wordManager : MonoBehaviour
         myDB db = GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
         correctWord = wordslist[0];
+        PlayerPrefs.SetString("LastCorrect", correctWord);
+        PlayerPrefs.Save();
         Debug.Log("correctWord is: " + correctWord);
         wordslist.AddRange(wordslist.Take(6)); //add correct word again for better chance at winning, and also 5 wrong duplicates to prevent cheesing
         shuffleList(wordslist);

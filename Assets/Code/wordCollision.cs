@@ -39,6 +39,7 @@ public class wordCollision : MonoBehaviour
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
                 GameManager.HeartAmount += 1;
+                Destroy(gameObject);
                 GameManager.nextLevel();
             }
             else
@@ -47,31 +48,52 @@ public class wordCollision : MonoBehaviour
                 scoreClass.incorrectWordScoreUpdate();
                 GameManager.HeartAmount -= 1;
                 hs.removeHeart();
-                if (manager.TextObjInGame == 0)
+
+                if (manager.TextObjInGame <= 1)
                 {
+                    GameObject.Find("CorrectWord").GetComponent<Text>().text = manager.getCorrectWord() + ":התייה הנוכנה הלימה ";
                     Debug.Log("No more words to catch- next level");
-                    GameManager.nextLevel();
+                    Invoke("nextLevelCall", 5f);
+                }
+                else
+                {
+                    Destroy(gameObject);
                 }
             }
 
-            Destroy(gameObject);
-            manager.TextObjInGame--;
-            Debug.Log(manager.TextObjInGame);
         }
         else if (other.gameObject.tag == "Floor")
         {
-            Destroy(gameObject);
-            manager.TextObjInGame--;
+            
             Debug.Log("floor!");
-            Debug.Log(manager.TextObjInGame);
-            if (manager.TextObjInGame == 0)
+            if (manager.TextObjInGame <= 1)
             {
+                GameObject.Find("CorrectWord").GetComponent<Text>().text = manager.getCorrectWord() + ":התייה הנוכנה הלימה ";
                 Debug.Log("No more words to catch- next level");
-                GameManager.nextLevel();
+                Invoke("nextLevelCall", 5f);
+             
+
             }
+            else {
+                Destroy(gameObject);
+            }
+
         }
 
-        
-            
+           
+    }
+
+    void nextLevelCall()
+    {
+        Debug.Log("next level mannn");
+        GameManager.nextLevel();
+    }
+
+    void OnDestroy()
+    {
+        manager.TextObjInGame--;
+        Debug.Log(gameObject.GetComponent<Text>().text);
     }
 }
+
+

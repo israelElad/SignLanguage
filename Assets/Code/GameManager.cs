@@ -32,9 +32,7 @@ public static class GameManager
 
     public static void gameOver()
     {
-
         SceneManager.LoadScene("gameOverScene");
-
     }
 
     public static void resetGame()
@@ -45,7 +43,6 @@ public static class GameManager
         HeartAmount = INIT_HEART_AMOUNT;
         LevelNum = INIT_LEVEL_NUM;
         score.scoreVal = 0;
-        //SceneManager.LoadScene("menuScene");
     }
 
     public static void nextLevel()

@@ -14,6 +14,7 @@ public class GameOverMenu : MonoBehaviour
     {
         scoreText.text = score.scoreVal.ToString();
         highscoreText.text= PlayerPrefs.GetInt("HighScore", 0).ToString();
+        GameObject.Find("CorrectWord").GetComponent<Text>().text = PlayerPrefs.GetString("LastCorrect", "?").ToString() + ":התייה הנוכנה הלימה ";
         Invoke("loadMenuScene", 5f);
     }
 
