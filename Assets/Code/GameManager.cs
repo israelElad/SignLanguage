@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public static class GameManager
 {
@@ -20,9 +17,11 @@ public static class GameManager
     public static float FallSpeed { get; set; } = INIT_FALL_SPEED;
     public static float WordDelay { get; set; } = INIT_WORD_DELAY;
     public static float CupSpeed { get; set; } = INIT_CUP_SPEED;
-    public static int HeartAmount {
+    public static int HeartAmount
+    {
         get => heartAmount;
-        set {
+        set
+        {
             if (value <= 0)
             {
                 GameObject.Find("Audio").GetComponent<AudioSource>().Stop();
@@ -34,7 +33,6 @@ public static class GameManager
             }
         }
     }
-
 
     public static void gameOver()
     {
@@ -59,8 +57,5 @@ public static class GameManager
         FallSpeed += 0.5f;
         CupSpeed += 1;
         SceneManager.LoadScene("gameScene");
-        
     }
-
-
 }

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using YoutubePlayer;
 
 public class wordManager : MonoBehaviour
@@ -16,6 +13,7 @@ public class wordManager : MonoBehaviour
     public LoadingIndicator isLoading;
     public bool doneLoading = false;
     public int TextObjInGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +32,8 @@ public class wordManager : MonoBehaviour
         PlayerPrefs.SetString("LastCorrect", correctWord);
         PlayerPrefs.Save();
         Debug.Log("correctWord is: " + correctWord);
-        wordslist.AddRange(wordslist.Take(6)); //add correct word again for better chance at winning, and also 5 wrong duplicates to prevent cheesing
+        //add correct word again for better chance at winning, and also 5 wrong duplicates to prevent cheesing
+        wordslist.AddRange(wordslist.Take(6));
         shuffleList(wordslist);
         TextObjInGame = wordslist.Count;
     }

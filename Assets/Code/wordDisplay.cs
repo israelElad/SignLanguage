@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class wordDisplay : MonoBehaviour
 {
-    
+
     public Text text;
 
     public void SetWord(string word)
