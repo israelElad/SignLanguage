@@ -3,5 +3,5 @@ IF EXIST C:\SignLanguage (
 ) ELSE (
     echo copying files..
     mkdir C:\SignLanguage
-    copy %~dp0\DB.db C:\SignLanguage
+    copy "%~dp0\DB.db" C:\SignLanguage
 )
