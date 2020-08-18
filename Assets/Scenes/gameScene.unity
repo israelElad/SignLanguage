@@ -10782,6 +10782,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1497734499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497734500}
+  - component: {fileID: 1497734502}
+  - component: {fileID: 1497734501}
+  m_Layer: 5
+  m_Name: WellDone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1497734500
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497734499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1928716610}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -36}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1497734501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497734499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1497734502
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497734499}
+  m_CullTransparentMesh: 0
 --- !u!1 &1612920758
 GameObject:
   m_ObjectHideFlags: 0
@@ -10960,7 +11038,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://r6---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1597707024&ei=sL46X9P3EtSl1wbC2J7gCw&ip=2a01%3A6500%3Aa047%3Acad8%3Ae290%3A0%3A105e%3Ab981&id=o-AN2XDoNmy6EQk-G0AEYdxT_5HhZbKJZWqeL54V1c4Rim&itag=22&source=youtube&requiressl=yes&mh=9J&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7s&ms=au%2Crdu&mv=m&mvi=6&pl=46&initcwndbps=3123750&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=2.763&lmt=1511687456434277&mt=1597685317&fvip=1&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgGtyoNt_6fdODkZfdhp7R0s7ZZ3WHCE3C33S9ZTuJuzoCIFu4XD3OR7QzOtoDHAjZi4laBp1SZ-kgYH36ujtkF552&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhALtLJr92Ar9LnzzwDpLbmQEhD1gdm7mbeqmmduUp4EBnAiEAk--Som9ng-k9DYkm6c4ocbNT6FaeZ4-y_qUTgi7rDk4%3D
+  m_Url: https://r1---sn-gphvo-ua8e.googlevideo.com/videoplayback?expire=1597791170&ei=YQc8X47NPJ2fxN8Pp4Kh4Ak&ip=2a01%3A6500%3Aa043%3Acad8%3A226d%3A0%3A8f%3A8680&id=o-AO9LD-KJingnfuGIrzPttUmM3KmlZOcQKRLcF3KmAsDf&itag=22&source=youtube&requiressl=yes&mh=SL&mm=31%2C29&mn=sn-gphvo-ua8e%2Csn-aigzrn7k&ms=au%2Crdu&mv=m&mvi=1&pl=47&initcwndbps=2916250&vprv=1&mime=video%2Fmp4&ratebypass=yes&dur=4.086&lmt=1513603235697889&mt=1597769435&fvip=1&fexp=23883098&c=WEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhALLXNK7PsaYq8Jwxo8LrB94_SDWGakTdIWoAgcR9Gnr5AiEAsP2VBvsNXnlgltKhQ3IBkwVdfn3w7gwOJ78eRJjAk1w%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhANGbY780Ktqr14ViHo2qKEWGh8Wzy594ZBml7SajLKPnAiEA28_Hx9b2M6rtpmURN7-bMIBDCq01Ejoh_ElgfpBW9GY%3D
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -11689,6 +11767,7 @@ RectTransform:
   - {fileID: 275824656}
   - {fileID: 1843936636}
   - {fileID: 1854909392}
+  - {fileID: 1497734500}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

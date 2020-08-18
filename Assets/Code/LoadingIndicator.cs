@@ -10,10 +10,15 @@ public class LoadingIndicator : MonoBehaviour
     void Start()
     {
         isLoading.text = "...ןעוט";
+        if (GameManager.LevelNum > 1)
+        {
+            GameObject.Find("WellDone").GetComponent<Text>().text = "!דובכה לכ";
+        }
     }
 
     public void Loaded()
     {
         isLoading.text = "";
+        GameObject.Find("WellDone").GetComponent<Text>().text = "";
     }
 }
