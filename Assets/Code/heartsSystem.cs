@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class heartsSystem : MonoBehaviour
 {
 
-    [SerializeField] private Sprite heartSprite;
+    [SerializeField] public Sprite heartSprite;
     private static List<Image> heartsList;
     private static Vector2 heartsNextPos;
 

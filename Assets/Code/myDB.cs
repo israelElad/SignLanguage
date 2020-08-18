@@ -50,6 +50,7 @@ namespace YoutubePlayer
             //reformat text to rtl
             for (var i = 0; i < wordlist.Count; i++)
             {
+                //reverse word order
                 wordlist[i] = String.Join(" ", wordlist[i].Split(' ').Reverse());
                 wordlist[i] = Reverse(wordlist[i]);
                 wordlist[i] = SplitToLines(wordlist[i]);
