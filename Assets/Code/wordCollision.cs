@@ -65,7 +65,7 @@ public class wordCollision : MonoBehaviour
         DontDestroyOnLoad(GameObject.Find("success sound"));
         DontDestroyOnLoad(GameObject.Find("Particle System"));
         DontDestroyOnLoad(GameObject.Find("Particle System (1)"));
-        GameManager.nextLevel();
+        GameManager.nextLevel(true);
         AudioSource audioData = GameObject.Find("success sound").GetComponent<AudioSource>();
         audioData.PlayOneShot(audioData.clip);
         GameObject.Find("Particle System").GetComponent<ParticleSystem>().Play();
@@ -86,7 +86,7 @@ public class wordCollision : MonoBehaviour
         {
             showCorrectWord();
             Debug.Log("No more words to catch- next level");
-            Invoke("nextLevelCall", 5f);
+            Invoke("nextLevelFail", 5f);
         }
         else
         {
@@ -105,7 +105,7 @@ public class wordCollision : MonoBehaviour
             AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
             audioData.PlayOneShot(audioData.clip);
             GameManager.HeartAmount -= 1;
-            Invoke("nextLevelCall", 5f);
+            Invoke("nextLevelFail", 5f);
         }
         else
         {
@@ -114,9 +114,9 @@ public class wordCollision : MonoBehaviour
     }
 
 
-    void nextLevelCall()
+    void nextLevelFail()
     {
-        GameManager.nextLevel();
+        GameManager.nextLevel(false);
     }
 
     void OnDestroy()

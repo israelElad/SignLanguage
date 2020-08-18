@@ -15,6 +15,7 @@ public static class GameManager
 
     private static int heartAmount = INIT_HEART_AMOUNT;
 
+    public static bool WasSuccess = false;
     public static int LevelNum { get; set; } = INIT_LEVEL_NUM;
     public static float FallSpeed { get; set; } = INIT_FALL_SPEED;
     public static float WordDelay { get; set; } = INIT_WORD_DELAY;
@@ -50,8 +51,9 @@ public static class GameManager
         score.scoreVal = 0;
     }
 
-    public static void nextLevel()
+    public static void nextLevel(bool success)
     {
+        WasSuccess = success;
         WordDelay = INIT_WORD_DELAY - (0.05f * LevelNum);
         LevelNum++;
         FallSpeed += 0.5f;
