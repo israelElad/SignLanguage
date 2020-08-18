@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,8 +16,16 @@ public class GameOverMenu : MonoBehaviour
     {
         scoreText.text = score.scoreVal.ToString();
         highscoreText.text= PlayerPrefs.GetInt("HighScore", 0).ToString();
-        GameObject.Find("CorrectWord").GetComponent<Text>().text = PlayerPrefs.GetString("LastCorrect", "?").ToString() + ":התייה הנוכנה הלימה ";
+        showCorrectWord();
         Invoke("loadMenuScene", 5f);
+    }
+
+    private void showCorrectWord()
+    {
+        string correctWord = PlayerPrefs.GetString("LastCorrect", "?").ToString();
+        correctWord = correctWord.Replace('\n', ' '); //combine the lines
+        correctWord = String.Join(" ", correctWord.Split(' ').Reverse());
+        GameObject.Find("CorrectWord").GetComponent<Text>().text = correctWord + " :התייה הנוכנה הלימה ";
     }
 
     void loadMenuScene()
@@ -24,15 +34,4 @@ public class GameOverMenu : MonoBehaviour
         SceneManager.LoadScene("menuScene");
     }
 
-
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
