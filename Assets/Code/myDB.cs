@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using Mono.Data.Sqlite;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using UnityEngine;
-using System.Data;
-using Mono.Data.Sqlite;
-using System.IO;
 
 namespace YoutubePlayer
 {
@@ -19,19 +15,8 @@ namespace YoutubePlayer
         void Start()
         {
             String db_path = "";
-//#if DEBUG
- //           db_path = Application.dataPath;
-
-//#else
-//            db_path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-//             print(db_path);
-            
-//#endif
-           // print("db_path = " + db_path);
             db_path = "C:/SignLanguage/DB.db";
             connection = "URI=file:" + db_path;
-
-           
         }
         public List<string> WordLottery()
         {

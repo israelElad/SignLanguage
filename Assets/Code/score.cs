@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class score : MonoBehaviour
 {
     public Text scoreText;
 
-    public static int scoreVal=0;
+    public static int scoreVal = 0;
     private const int incorrectWordScore = -10;
     private const int correctWordScore = 100;
 

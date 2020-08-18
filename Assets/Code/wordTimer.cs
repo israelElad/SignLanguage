@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class wordTimer : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class wordTimer : MonoBehaviour
         if (Time.time >= nextWordTime && manager.doneLoading)
         {
             //add next word
-            if (manager.addNextWordFromList() ==false)
+            if (manager.addNextWordFromList() == false)
             {
                 Debug.Log("no more words to display!");
             }

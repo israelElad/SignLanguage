@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +17,7 @@ public class heartsSystem : MonoBehaviour
         {
             addHeart();
         }
-        
+
     }
 
     //creates a heart
@@ -62,7 +61,6 @@ public class heartsSystem : MonoBehaviour
         Debug.Log("added heart!");
         CreateHeartImage(heartsNextPos);
         heartsNextPos += new Vector2(30, 0);
-
     }
 
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +9,6 @@ public class wordCollision : MonoBehaviour
     public score scoreClass;
     private heartsSystem hs;
     private bool hasCollide = false;
-
 
     public void Start()
     {
@@ -113,7 +109,6 @@ public class wordCollision : MonoBehaviour
         }
     }
 
-
     void nextLevelFail()
     {
         GameManager.nextLevel(false);
@@ -132,7 +127,4 @@ public class wordCollision : MonoBehaviour
         correctWord = String.Join(" ", correctWord.Split(' ').Reverse());
         GameObject.Find("CorrectWord").GetComponent<Text>().text = correctWord + " :התייה הנוכנה הלימה ";
     }
-
-
-
 }

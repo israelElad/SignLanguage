@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,9 +13,9 @@ public class GameOverMenu : MonoBehaviour
     void Start()
     {
         scoreText.text = score.scoreVal.ToString();
-        highscoreText.text= PlayerPrefs.GetInt("HighScore", 0).ToString();
+        highscoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         showCorrectWord();
-        Invoke("loadMenuScene", 5f);
+        Invoke("loadMenuScene", 9.2f);
     }
 
     private void showCorrectWord()
