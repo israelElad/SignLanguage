@@ -23,9 +23,14 @@ public static class GameManager
         get => heartAmount;
         set {
             if (value <= 0)
+            {
+                GameObject.Find("Audio").GetComponent<AudioSource>().Stop();
                 gameOver();
+            }
             else
+            {
                 heartAmount = value;
+            }
         }
     }
 
@@ -55,6 +60,7 @@ public static class GameManager
         FallSpeed += 0.5f;
         CupSpeed += 1;
         SceneManager.LoadScene("gameScene");
+        
     }
 
 

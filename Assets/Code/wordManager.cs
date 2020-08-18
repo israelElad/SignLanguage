@@ -20,6 +20,11 @@ public class wordManager : MonoBehaviour
     void Start()
     {
         doneLoading = false;
+        DontDestroyOnLoad(GameObject.Find("Audio"));
+        if (!GameObject.Find("Audio").GetComponent<AudioSource>().isPlaying)
+        {
+            GameObject.Find("Audio").GetComponent<AudioSource>().Play();
+        }
         var loading = GameObject.Find("Loading");
         isLoading = loading.GetComponent("LoadingIndicator") as LoadingIndicator;
         GameObject.Find("Video Player").GetComponent<YoutubePlayer.YoutubePlayer>().YoutubeVideoStarting += Loaded;
