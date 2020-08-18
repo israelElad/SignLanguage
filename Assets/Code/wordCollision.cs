@@ -39,8 +39,15 @@ public class wordCollision : MonoBehaviour
                 Debug.Log("correct word!");
                 scoreClass.correctWordScoreUpdate();
                 GameManager.HeartAmount += 1;
-                Destroy(gameObject);
+                DontDestroyOnLoad(GameObject.Find("success sound"));
+                DontDestroyOnLoad(GameObject.Find("Particle System"));
+                DontDestroyOnLoad(GameObject.Find("Particle System (1)"));
+                //Destroy(gameObject);
                 GameManager.nextLevel();
+                AudioSource audioData = GameObject.Find("success sound").GetComponent<AudioSource>();
+                audioData.PlayOneShot(audioData.clip);
+                GameObject.Find("Particle System").GetComponent<ParticleSystem>().Play();
+                GameObject.Find("Particle System (1)").GetComponent<ParticleSystem>().Play();
             }
             else
             {
@@ -48,6 +55,9 @@ public class wordCollision : MonoBehaviour
                 scoreClass.incorrectWordScoreUpdate();
                 GameManager.HeartAmount -= 1;
                 hs.removeHeart();
+
+                AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
+                audioData.PlayOneShot(audioData.clip);
 
                 if (manager.TextObjInGame <= 1)
                 {
@@ -70,8 +80,10 @@ public class wordCollision : MonoBehaviour
             {
                 GameObject.Find("CorrectWord").GetComponent<Text>().text = manager.getCorrectWord() + ":התייה הנוכנה הלימה ";
                 Debug.Log("No more words to catch- next level");
+                DontDestroyOnLoad(GameObject.Find("Wrong sound"));
+                AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
+                audioData.PlayOneShot(audioData.clip);
                 Invoke("nextLevelCall", 5f);
-             
 
             }
             else {
