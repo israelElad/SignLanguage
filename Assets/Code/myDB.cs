@@ -3,48 +3,66 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 using System.Linq;
+using UnityEngine;
+using System.Data;
+using Mono.Data.Sqlite;
+using System.IO;
 
 namespace YoutubePlayer
 {
     public class myDB : MonoBehaviour
     {
-        private MySqlConnection con;
+        private IDbConnection con;
+        private string connection;
         // Start is called before the first frame update
         void Start()
         {
+            String db_path = "";
+//#if DEBUG
+ //           db_path = Application.dataPath;
 
-            string cs = "Database = SignLanguageDB; Server = 127.0.0.1; Uid = root; Password = vered1234; pooling = false; CharSet = utf8; port = 3306";
-            con = new MySqlConnection(cs);
-            con.Open();
+//#else
+//            db_path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+//             print(db_path);
+            
+//#endif
+           // print("db_path = " + db_path);
+            db_path = "C:/SignLanguage/DB.db";
+            connection = "URI=file:" + db_path;
+
+           
         }
         public List<string> WordLottery()
         {
             List<string> wordlist = new List<string>();
-            string sql = "SELECT word FROM SignLanguageDB.all ORDER BY RAND() LIMIT 30";
-            MySqlCommand cmd = new MySqlCommand(sql, con);
+            con = new SqliteConnection(connection);
+            con.Open();
+            IDbCommand cmnd_read = con.CreateCommand();
+            IDataReader reader;
+            string query = "SELECT word FROM my_Table ORDER BY random() LIMIT 30";
+            cmnd_read.CommandText = query;
+            reader = cmnd_read.ExecuteReader();
 
-            MySqlDataReader rdr = cmd.ExecuteReader();
-
-
-
-            while (rdr.Read())
+            while (reader.Read())
             {
-                wordlist.Add(rdr.GetString(0));
+                wordlist.Add(reader.GetString(0));
             }
-            rdr.Close();
-            sql = "SELECT url FROM SignLanguageDB.all WHERE word=" + '\u0022' + wordlist[0] + '\u0022';
-            cmd = new MySqlCommand(sql, con);
-            rdr = cmd.ExecuteReader();
+            con.Close();
+
+            con = new SqliteConnection(connection);
+            con.Open();
+            query = "SELECT url FROM my_Table WHERE word=\"" + wordlist[0] + "\"";
+            cmnd_read = con.CreateCommand();
+            cmnd_read.CommandText = query;
+            reader = cmnd_read.ExecuteReader();
             string wordUrl = null;
-            while (rdr.Read())
+            while (reader.Read())
             {
-                wordUrl = rdr.GetString(0);
+                wordUrl = reader.GetString(0);
                 break;
             }
-            rdr.Close();
+            con.Close();
             GameObject.Find("Video Player").GetComponent<YoutubePlayer>().PlayVideoAsync(wordUrl);
 
             //reformat text to rtl
