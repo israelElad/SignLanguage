@@ -29,7 +29,7 @@ public static class GameManager
             }
             else
             {
-                heartAmount = value;
+                heartAmount = Math.Min(value, 10);
             }
         }
     }

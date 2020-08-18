@@ -104,7 +104,7 @@ public class wordCollision : MonoBehaviour
             DontDestroyOnLoad(GameObject.Find("Wrong sound"));
             AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
             audioData.PlayOneShot(audioData.clip);
-
+            GameManager.HeartAmount -= 1;
             Invoke("nextLevelCall", 5f);
         }
         else
@@ -116,7 +116,6 @@ public class wordCollision : MonoBehaviour
 
     void nextLevelCall()
     {
-        Debug.Log("next level mannn");
         GameManager.nextLevel();
     }
 
