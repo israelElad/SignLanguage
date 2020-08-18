@@ -84,7 +84,7 @@ public class wordCollision : MonoBehaviour
                 AudioSource audioData = GameObject.Find("Wrong sound").GetComponent<AudioSource>();
                 audioData.PlayOneShot(audioData.clip);
                 Invoke("nextLevelCall", 5f);
-
+                GameManager.HeartAmount -= 1;
             }
             else {
                 Destroy(gameObject);
