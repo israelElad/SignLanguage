@@ -12,12 +12,14 @@ public class wordManager : MonoBehaviour
     string correctWord;
     public LoadingIndicator isLoading;
     public bool doneLoading = false;
+    private float prevSize;
     public int TextObjInGame;
 
     // Start is called before the first frame update
     void Start()
     {
         doneLoading = false;
+        prevSize = GameObject.Find("Video Player").GetComponent<RectTransform>().rect.width;
         DontDestroyOnLoad(GameObject.Find("Audio"));
         if (!GameObject.Find("Audio").GetComponent<AudioSource>().isPlaying)
         {
@@ -25,6 +27,7 @@ public class wordManager : MonoBehaviour
         }
         var loading = GameObject.Find("Loading");
         isLoading = loading.GetComponent("LoadingIndicator") as LoadingIndicator;
+        GameObject.Find("Video Player").GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
         GameObject.Find("Video Player").GetComponent<YoutubePlayer.YoutubePlayer>().YoutubeVideoStarting += Loaded;
         myDB db = GameObject.Find("Scripts").GetComponent<myDB>();
         wordslist = db.WordLottery();
@@ -42,6 +45,7 @@ public class wordManager : MonoBehaviour
     {
         isLoading.Loaded();
         doneLoading = true;
+        GameObject.Find("Video Player").GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, prevSize);
     }
 
     private void shuffleList(List<string> list)
