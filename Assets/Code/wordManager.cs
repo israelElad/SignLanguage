@@ -43,6 +43,10 @@ public class wordManager : MonoBehaviour
 
     private void Loaded(string url)
     {
+        Invoke("stopLoding", 3f);
+    }
+    void stopLoding()
+    {
         isLoading.Loaded();
         doneLoading = true;
         GameObject.Find("Video Player").GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, prevSize);
