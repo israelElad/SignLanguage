@@ -1,7 +1,8 @@
 IF EXIST C:\SignLanguage (
-    echo files already exists
+    echo folder already exists
 ) ELSE (
-    echo copying files..
+    echo creat folder..
     mkdir C:\SignLanguage
-    copy "%~dp0\DB.db" C:\SignLanguage
 )
+echo copying files..
+copy "%~dp0\DB.db" C:\SignLanguage
