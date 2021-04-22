@@ -1,17 +1,20 @@
 # SignLanguage
 
-משחק חוויתי ללמוד שפת הסימנים לכל הגילאים.
 
-הוראות המשחק:
-בצד המסך מופיע סרטון של מילה המוצגת בשפת הסימנים, מחלקו העליון של המסך נופלות מילים (מוצגות כטקסט) 
-על השחקן לתפוס את המילה הנופלת המוצגת בסרטון.
-אם תופסים מילה נכונה מרוויחים 100 נקודות ועוד חיים.
-אם תופסים מילה לא נכונה מפסידים 10 נקודות ומפסידים חיים.
-אם לא תפסנו אף מילה ונגמרו המילים מפסידים חיים.
-ככל שעוברים יותר שלבים כך המהירות עולה והמשחק מאתגר יותר.
-תהנו!
+https://user-images.githubusercontent.com/45766976/115696434-5eaa9d80-a36b-11eb-9a12-c61b64e6090d.mp4
+
+A fun game to learn sign language for all ages.
+
+Game Instructions:
+A video of a word's representation in sign language appears on the side of the screen, words (displayed as text) fall from the top of the screen.
+The player must catch the falling word shown in the video.
+If you catch the right word, you earn 100 points and an extra life point.
+If you catch a wrong word you lose 10 points and lose a life.
+If you did not catch a single word and the words ended up, you lose a life point.
+The more stages you go through, the faster the game - meaning way more challenging.
+Enjoy!
  
-הוראות התקנה:
-1. הרץ את run.bat (על ידי לחיצה עליו)
-2. לאחר מכן תוכל להפעיל את המשחק ע"י לחיצה על SignLanguage.exe.
-* כדאי ללחוץ לחצן ימני על SignLanguage.exe --> צור קיצור דרך, ולהעביר את קיצור הדרך לשולחן העבודה.
+installation instructions:
+1. Run run.bat (by clicking on it)
+2. You can then start the game by clicking SignLanguage.exe.
+* You should right-click on SignLanguage.exe -> Create a shortcut, and move the shortcut to the desktop.
