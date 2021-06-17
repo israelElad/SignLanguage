@@ -17,3 +17,21 @@ installation instructions:
 1. Run run.bat (by clicking on it)
 2. You can then start the game by clicking SignLanguage.exe.
 * You should right-click on SignLanguage.exe -> Create a shortcut, and move the shortcut to the desktop.
+
+
+
+**Tools we used:**
+
+Collaboration: Github + Clickup.
+
+Game Engine: Unity.
+
+IDE: Visual Studio.
+
+Database: MySql, SQLite.
+
+**UML Diagram**
+
+![image](https://github.com/israelElad/SignLanguage/blob/master/uml%20diagram.jpg)
+
+For additional information regarding the source code [click here](https://github.com/israelElad/SignLanguage/blob/master/Source%20Documentation.pdf).
